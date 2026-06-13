@@ -1,0 +1,12 @@
+F:\web sideproj\learnify\backend\Entity\bin\Debug\net5.0\Entity.deps.json
+F:\web sideproj\learnify\backend\Entity\bin\Debug\net5.0\Entity.dll
+F:\web sideproj\learnify\backend\Entity\bin\Debug\net5.0\ref\Entity.dll
+F:\web sideproj\learnify\backend\Entity\bin\Debug\net5.0\Entity.pdb
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\Entity.csproj.AssemblyReference.cache
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\Entity.AssemblyInfoInputs.cache
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\Entity.AssemblyInfo.cs
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\Entity.csproj.CoreCompileInputs.cache
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\Entity.dll
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\ref\Entity.dll
+F:\web sideproj\learnify\backend\Entity\obj\Debug\net5.0\Entity.pdb

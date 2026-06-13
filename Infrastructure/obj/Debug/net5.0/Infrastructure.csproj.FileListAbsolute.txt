@@ -1,0 +1,15 @@
+F:\web sideproj\learnify\backend\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+F:\web sideproj\learnify\backend\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+F:\web sideproj\learnify\backend\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+F:\web sideproj\learnify\backend\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+F:\web sideproj\learnify\backend\Infrastructure\bin\Debug\net5.0\Entity.dll
+F:\web sideproj\learnify\backend\Infrastructure\bin\Debug\net5.0\Entity.pdb
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+F:\web sideproj\learnify\backend\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
