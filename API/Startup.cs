@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Entity.Interfaces;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,8 @@ namespace API
         {
 
             services.AddControllers();
+
+            services.AddScoped<ICourseRepository, CourseRepository>();
             
             // Register Database Context : use SQLite
             services.AddDbContext<StoreContext>(x =>

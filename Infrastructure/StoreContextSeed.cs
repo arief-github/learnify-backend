@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Entity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Infrastructure
@@ -15,35 +16,44 @@ namespace Infrastructure
         {
             try
             {
-                if (!context.Courses.Any())
-                {
-                    // 1. read file json secara asynchronous
-                    var coursesData = await File.ReadAllTextAsync("../Infrastructure/Seed/courses.json");
-                    
-                    // 2. konvert json kedalam list courses.
-                    var courses = JsonSerializer.Deserialize <List<Course>> (coursesData);
-
-                    // throw return jika courses null
-                    if (courses == null)
-                    {
-                        return;
-                    }
-                    
-                    // jika hasil konversi cocok, masukkan data ke dalam DB
-                    foreach (var item in courses)
-                    {
-                        context.Courses.Add(item);
-                    }
-                    
-                    // save changes to DB
-                    await context.SaveChangesAsync();
-                }
+                await SeedEntityAsync(context, context.Categories, "../Infrastructure/Seed/categories.json");
+                await SeedEntityAsync(context, context.Courses, "../Infrastructure/Seed/courses.json");
+                await SeedEntityAsync(context, context.Requirements, "../Infrastructure/Seed/requirements.json");
+                await SeedEntityAsync(context, context.Learnings, "../Infrastructure/Seed/learnings.json");
             }
             catch (Exception ex)
             {
                 // jika json tidak cocok saat dilakukan convert. throw error exception
                 logger.LogError(ex.Message);
             }
+        }
+
+        private static async Task SeedEntityAsync<T>(
+            StoreContext context, 
+            DbSet<T> dbSet, 
+            string filePath) where T : class
+        {
+            // 1. skip jika data sudah ada
+            if (await dbSet.AnyAsync())
+            {
+                return;
+            }
+
+            // 2. baca file json secara asynchronous
+            var jsonData = await File.ReadAllTextAsync(filePath);
+
+            // 3. konversi json ke list<T>
+            var entities = JsonSerializer.Deserialize<List<T>>(jsonData);
+
+            // 4. guard clause — skip jika null/empty
+            if (entities is not { Count: > 0 })
+            {
+                return;
+            }
+
+            // 5. masukkan data ke DB
+            await dbSet.AddRangeAsync(entities);
+            await context.SaveChangesAsync();
         }
     }
 }
